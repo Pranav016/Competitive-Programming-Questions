@@ -1,3 +1,11 @@
+/*
+Problem- We have to find median of sorted arrays.
+
+Median- Element wih 'n' elements smaller than it and 'n' elements greater than it.
+
+Intuition- We put both the arrays in the vector and sorted it. Then we get the middle element. 
+*/
+
 #include<iostream>
 #include<vector>
 #include<algorithm>
