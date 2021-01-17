@@ -1,3 +1,7 @@
+/*
+Given an array, the task is to calculate the sum of lengths of contiguous subarrays having all elements distinct
+*/
+
 #include<iostream>
 #include<map>
 using namespace std;
@@ -24,3 +28,14 @@ int main(){
     }
     cout<<len;
 }
+
+/*
+
+Sample Input
+3
+1 2 3
+
+Sample Output
+10
+
+*/
