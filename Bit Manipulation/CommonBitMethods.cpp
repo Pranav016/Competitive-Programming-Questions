@@ -1,6 +1,13 @@
 #include<iostream>
 using namespace std;
 
+/*
+Theory-
+Setting a bit - means that if K-th bit is 0, then set it to 1 and if it is 1 then leave it unchanged.
+Clearing a bit - means that if K-th bit is 1, then clear it to 0 and if it is 0 then leave it unchanged.
+Toggling a bit - means that if K-th bit is 1, then change it to 0 and if it is 0 then change it to 1.
+*/
+
 bool isOdd(int n){
     /*Check if the number is odd or even-
     This can be done by & with 1,
@@ -32,10 +39,27 @@ int setBit(int n, int i){ // we can also send 'n' by reference
     return ans;
 }
 
+void clearBit(int &n,int i){
+    /* Clear Bit the bit at 'i' th position from 1 to 0.
+    We can do this by makinga mask of all 1s with ith
+    pos as 0 and then AND with the number n to clear the ith bit.
+    We have to AND for a specific reason, we cannot do OR. */
+    int mask = ~(1<<i); //example- 11111011
+    n = n&mask;
+}
+
+void updateBit(int &n, int i, int v){
+    clearBit(n,i);
+    int mask = v<<i;
+    n = n|mask;
+}
+
 int main(){
     int n,i;
     cin>>n>>i;
     cout<<"Get Bit at pos "<<i<<" - "<<getBit(n,i)<<endl;
     // cout<<(getBit(n,i) ? "Set Bit": "Non Set Bit");
     cout<<"Set Bit at pos "<<i<<" to 1 - "<<setBit(n,i)<<endl;
+    updateBit(n,i,1);
+    cout<<n<<endl;
 }
