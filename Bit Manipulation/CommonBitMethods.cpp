@@ -55,17 +55,26 @@ void updateBit(int &n, int i, int v){
 }
 
 int clearLastIBits(int n, int i){
-    int mask = (-1<<i); // i is the number of bits getting cleared
+    int mask = (-1<<i); // i is the count of bits getting cleared
     return n&mask;
 }
 
+int clearRangeItoJ(int n, int j, int i){
+    int mask1 = (~0)<<(j+1);
+    int mask2 = (1<<i)-1; //or pow(2,i)-1
+    // example for mask2-  1000 -1 = 0111
+    int mainMask = mask1|mask2;
+    return n&mainMask;
+}
+
 int main(){
-    int n,i;
-    cin>>n>>i;
+    int n,i,j;
+    cin>>n>>j>>i;
     // cout<<"Get Bit at pos "<<i<<" - "<<getBit(n,i)<<endl;
     // cout<<(getBit(n,i) ? "Set Bit": "Non Set Bit");
     // cout<<"Set Bit at pos "<<i<<" to 1 - "<<setBit(n,i)<<endl;
     // updateBit(n,i,1);
     // cout<<n<<endl;
-    cout<<clearLastIBits(n,i);
+    // cout<<clearLastIBits(n,i);
+    cout<<clearRangeItoJ(n,j,i);
 }
