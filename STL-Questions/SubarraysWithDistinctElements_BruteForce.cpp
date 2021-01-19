@@ -1,5 +1,15 @@
 /*
 Given an array, the task is to calculate the sum of lengths of contiguous subarrays having all elements distinct
+
+Input Format
+An integer n denoting size of array followed by n integers
+
+Constraints
+1<=N<=10^5
+
+Output Format
+The answer mod 10^9+7
+
 */
 
 #include<iostream>

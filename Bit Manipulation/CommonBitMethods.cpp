@@ -54,12 +54,18 @@ void updateBit(int &n, int i, int v){
     n = n|mask;
 }
 
+int clearLastIBits(int n, int i){
+    int mask = (-1<<i); // i is the number of bits getting cleared
+    return n&mask;
+}
+
 int main(){
     int n,i;
     cin>>n>>i;
-    cout<<"Get Bit at pos "<<i<<" - "<<getBit(n,i)<<endl;
+    // cout<<"Get Bit at pos "<<i<<" - "<<getBit(n,i)<<endl;
     // cout<<(getBit(n,i) ? "Set Bit": "Non Set Bit");
-    cout<<"Set Bit at pos "<<i<<" to 1 - "<<setBit(n,i)<<endl;
-    updateBit(n,i,1);
-    cout<<n<<endl;
+    // cout<<"Set Bit at pos "<<i<<" to 1 - "<<setBit(n,i)<<endl;
+    // updateBit(n,i,1);
+    // cout<<n<<endl;
+    cout<<clearLastIBits(n,i);
 }
