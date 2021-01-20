@@ -55,6 +55,7 @@ void updateBit(int &n, int i, int v){
 }
 
 int clearLastIBits(int n, int i){
+    // -1 = 111111111
     int mask = (-1<<i); // i is the count of bits getting cleared
     return n&mask;
 }
