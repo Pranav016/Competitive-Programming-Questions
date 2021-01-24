@@ -12,7 +12,7 @@ int main(){
     cin>>n;
     for(int i=0;i<n;i++){
         cin>>x;
-        ans = ans ^ x;
+        ans = ans ^ x; //XORing all the numbers
     }
     cout<<ans;
 }

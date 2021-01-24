@@ -18,7 +18,7 @@ bool isOdd(int n){
 
 int getBit(int n, int i){
     /* Check what is the bit at i'th position-
-    We create a mask by seft shifting 1 by i positions.
+    We create a mask by left shifting 1 by i positions.
     This mask will give us the ans because anything AND
     with 1 gives number itself.
     1 & 0 = 0
@@ -41,7 +41,7 @@ int setBit(int n, int i){ // we can also send 'n' by reference
 
 void clearBit(int &n,int i){
     /* Clear Bit the bit at 'i' th position from 1 to 0.
-    We can do this by makinga mask of all 1s with ith
+    We can do this by making a mask of all 1s with ith
     pos as 0 and then AND with the number n to clear the ith bit.
     We have to AND for a specific reason, we cannot do OR. */
     int mask = ~(1<<i); //example- 11111011
@@ -61,7 +61,7 @@ int clearLastIBits(int n, int i){
 }
 
 int clearRangeItoJ(int n, int j, int i){
-    int mask1 = (~0)<<(j+1);
+    int mask1 = (~0)<<(j+1); //example : 11110000
     int mask2 = (1<<i)-1; //or pow(2,i)-1
     // example for mask2-  1000 -1 = 0111
     int mainMask = mask1|mask2;

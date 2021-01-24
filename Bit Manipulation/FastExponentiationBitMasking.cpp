@@ -20,7 +20,7 @@ using namespace std;
 int main(){
     int a,n,ans=1;
     cin>>a>>n;
-    while(n>0){
+    while(n>0){ //'n' here is the power
         int last_bit = (n&1); //taking out the last bit
         if(last_bit){
         //if the last bit is a set bit then we multiply with ans
