@@ -6,7 +6,7 @@ Intuition-
 Let n be the length of the array.
 Total subsets that can be made from the char array - (1<<n)
 
-Run a loop for (1<<n) times and for every iteration,
+Run a loop for (1<<n) or 2^n times and for every iteration,
 use the bits of that iteration 'i' to print the
 corresponding character from the character array.
 Example- 
@@ -45,7 +45,7 @@ void filterSubstr(char *a,int n){
 
 void printSubstr(char *a){
     int n = strlen(a);
-    for(int i=0;i<(1<<n);i++){// loop runs till n^2 because thats how many subsets will be possible.
+    for(int i=0;i<(1<<n);i++){// loop runs till 2^n because thats how many subsets will be possible.
         filterSubstr(a,i);
     }
 }
