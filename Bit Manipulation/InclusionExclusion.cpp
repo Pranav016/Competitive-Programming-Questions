@@ -34,7 +34,7 @@ int main(){
         ll ans = 0;
         ll subsets = (1<<8)-1;//number of subsets possible are (2^n)-1
         for(ll i=1;i<=subsets;i++){ //We want to iterate upon the number of subsets.
-            ll denom = 1ll;
+            ll denom = 1ll; //The LL makes the integer literal of type long long, int is only 32 bits
             ll setbits = __builtin_popcount(i); //tells the number of set bits in a number
 
             for(int j=0;j<=7;j++){ // iterating over all the 8 bits of that number i as well as iterating over primes array
