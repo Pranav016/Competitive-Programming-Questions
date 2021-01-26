@@ -38,7 +38,7 @@ int main(){
             ll setbits = __builtin_popcount(i); //tells the number of set bits in a number
 
             for(int j=0;j<=7;j++){ // iterating over all the 8 bits of that number i as well as iterating over primes array
-                if(i&(1<<j)){ // we create a mask '(1<<j)' to check if that position has a set bit or not
+                if(i&(1<<j)){ // we create a mask '(1<<j)' to check if that position has a set bit or not/ this will help us to choose out primes
                     denom *= primes[j]; //we get the denom or the product we wanted to divide n
                 }
             }
