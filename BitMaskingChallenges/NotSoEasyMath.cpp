@@ -1,6 +1,6 @@
 /*
 Question (Storyline excluded)-
-ronman and Thor got into a fight and Ironman challenged Thor to find out the number of numbers between 1 and n which are divisible by any of the prime numbers less than 20
+Ironman and Thor got into a fight and Ironman challenged Thor to find out the number of numbers between 1 and n which are divisible by any of the prime numbers less than 20
 
 Theory-
 We have to calculate the union of the numbers divisbile by each of the primes numbers under 20. For this we can use inclusion-exclusion principle.

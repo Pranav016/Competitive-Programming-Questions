@@ -5,7 +5,7 @@ Inclusion Exclusion principle:
 
 Intuition-
 - All the terms with even number of elements are subtracted whereas elements with odd elemenets are to be added.
-- Number of subsets possible for n numbers are (2^n-1)
+- Number of subsets possible for n numbers are (2^n)-1
 - If we want to make subsets out of an array, we can use bitmasking to create numbers that help make subsets.
 Example- [a,b,c] ; 5 = 101 in bits which gives 'ac' subset.
 - Total numbers of number divisible by 15 under 1000 = floor(1000/15)
@@ -44,10 +44,10 @@ int main(){
             }
 
             if(setbits&1){ //number of elements are odd coz last digit is 1
-                ans += (n/denom); //if number of elements are odd then we add to denom
+                ans += (n/denom); //if number of elements are odd then we add n/denom
             }
             else{
-                ans -= (n/denom);//if number of elements are even then we subtract from denom
+                ans -= (n/denom);//if number of elements are even then we subtract n/denom
             }
         }
         cout<<ans<<endl;

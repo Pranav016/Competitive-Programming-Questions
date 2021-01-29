@@ -21,5 +21,5 @@ int main(){
         cin>>x;
         ans ^= x;
     }
-    cout<<x;
+    cout<<ans;
 }
